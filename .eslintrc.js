@@ -7,16 +7,16 @@ module.exports = {
   parserOptions: {
     sourceType: "module",
   },
-  plugins: ["react", "jest"],
+  plugins: ["jest"],
   settings: {
     react: {
       version: "detect",
     },
   },
   extends: [
+    "next",
+    "next/core-web-vitals",
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
     "plugin:jest/recommended",
     "prettier",
@@ -28,8 +28,6 @@ module.exports = {
   },
   rules: {
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
     "react-hooks/exhaustive-deps": "off",
   },
 };
