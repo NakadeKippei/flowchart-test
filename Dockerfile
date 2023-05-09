@@ -5,16 +5,16 @@ WORKDIR /app/
 COPY ./package.json ./
 RUN npm install
 
-COPY . .
+# COPY . .
 
-RUN npm run build
+# RUN npm run build
 
 
-FROM gcr.io/distroless/nodejs:14
+# FROM gcr.io/distroless/nodejs:14
 
-WORKDIR /app/
+# WORKDIR /app/
 
-COPY --from=build /app/.next ./.next
-COPY --from=build /app/package.json ./package.json
+# COPY --from=build /app/.next ./.next
+# COPY --from=build /app/package.json ./package.json
 
-CMD ["./node_modules/.bin/next", "start"]
+# CMD ["./node_modules/.bin/next", "start"]
